@@ -9,13 +9,18 @@
 
 <body>
 
+<div class="scroll-progress"></div>
+
 <!-- NAVIGATION -->
 <nav>
-    <ul class="nav-links">
+    <button id="theme-toggle" class="primary-btn">Toggle Theme</button>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <ul class="nav-links" id="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#resume">Resume</a></li>
+        <li><a href="#resume">Education</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
@@ -26,128 +31,3 @@
 <!-- HERO -->
 <section class="hero" id="home">
     <div class="hero-content">
-        <h2>Hello, I'M</h2>
-        <h1>Rutuja Tayade</h1>
-        <p><span class="typing"></span></p>
-
-        <div class="cta-buttons">
-            <button class="primary-btn" onclick="scrollToContact()">Hire Me</button>
-           <a href="cv.pdf" download class="secondary-btn">Download CV</a>
-
-        </div>
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section class="about" id="about">
-    <h2 class="section-title">About Me</h2>
-    <p class="about-text">
-        Passionate BCA student interested in Web Development, Frontend Designing and Programming.
-        I love building responsive and user-friendly websites with clean and efficient code.
-    </p>
-
-    <div class="about-info">
-        <div class="info-item">
-            <span>Name:</span>
-            <span>Rutuja Tayade</span>
-        </div>
-        <div class="info-item">
-            <span>Email:</span>
-            <span>tayaderutuja501@gmail.com</span>
-        </div>
-        <div class="info-item">
-            <span>Location:</span>
-            <span>Maharashtra, India</span>
-        </div>
-    </div>
-</section>
-
-<!-- SKILLS -->
-<section class="skills" id="skills">
-    <h2 class="section-title">My Skills</h2>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span>HTML</span>
-            <span>90%</span>
-        </div>
-        <div class="progress-bar">
-            <div class="progress" style="width: 90%"></div>
-        </div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span>CSS</span>
-            <span>85%</span>
-        </div>
-        <div class="progress-bar">
-            <div class="progress" style="width: 85%"></div>
-        </div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span>JavaScript</span>
-            <span>80%</span>
-        </div>
-        <div class="progress-bar">
-            <div class="progress" style="width: 80%"></div>
-        </div>
-    </div>
-
-</section>
-
-<!-- RESUME -->
-<section class="resume" id="resume">
-    <h2 class="section-title">Education</h2>
-
-    <div class="timeline">
-        <div class="timeline-item">
-            <span class="date">2023 - 2026</span>
-            <h4>Bachelor of Computer Applications</h4>
-            <p>Sant Gadge Baba Amravati University</p>
-        </div>
-
-        <div class="timeline-item">
-            <span class="date">2021 - 2023</span>
-            <h4>Higher Secondary Education</h4>
-            <p>Maharashtra Board</p>
-        </div>
-    </div>
-</section>
-
-<!-- PROJECTS -->
-<section class="projects" id="projects">
-    <h2 class="section-title">Projects</h2>
-
-    <div class="project-grid">
-        <div class="project-item">
-            <h3>Portfolio Website</h3>
-            <p>Responsive personal portfolio using HTML, CSS & JavaScript.</p>
-        </div>
-
-        <div class="project-item">
-            <h3>Quiz Website</h3>
-            <p>Interactive quiz application built using JavaScript.</p>
-        </div>
-    </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-    <h2 class="section-title">Get In Touch</h2>
-
-    <form class="contact-form" id="contactForm">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit" class="submit-btn">Send Message</button>
-    </form>
-</section>
-
-</main>
-
-<script src="script.js"></script>
-</body>
-</html>
