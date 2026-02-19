@@ -1,4 +1,4 @@
-// Typing Effect
+// ================= TYPING EFFECT =================
 const text = ["Frontend Developer", "Web Designer", "BCA Student"];
 let i = 0;
 let j = 0;
@@ -8,6 +8,8 @@ let speed = 100;
 
 function typeEffect() {
     const typing = document.querySelector(".typing");
+    if (!typing) return;
+
     currentText = text[i];
 
     if (!isDeleting) {
@@ -26,21 +28,48 @@ function typeEffect() {
     }
     setTimeout(typeEffect, speed);
 }
-
 typeEffect();
 
-// Smooth Scroll to Contact
+
+// ================= THEME TOGGLE =================
+const themeBtn = document.getElementById("theme-toggle");
+
+if (localStorage.getItem("theme") === "light") {
+    document.body.classList.add("light-mode");
+}
+
+if (themeBtn) {
+    themeBtn.addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");
+
+        if (document.body.classList.contains("light-mode")) {
+            localStorage.setItem("theme", "light");
+        } else {
+            localStorage.setItem("theme", "dark");
+        }
+    });
+}
+
+
+// ================= SMOOTH SCROLL =================
 function scrollToContact(){
     document.getElementById("contact").scrollIntoView({behavior:"smooth"});
 }
 
-// Contact Alert
-document.getElementById("contactForm").addEventListener("submit", function(e){
-    e.preventDefault();
-    alert("Message Sent Successfully ✅");
-    this.reset();
-});
-// Scroll Animation
+
+// ================= CONTACT FORM =================
+const form = document.getElementById("contactForm");
+
+if(form){
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+        alert("Message Sent Successfully ✅");
+        this.reset();
+    });
+}
+
+
+// ================= SCROLL ANIMATION =================
 window.addEventListener("scroll", function () {
     const sections = document.querySelectorAll("section");
 
@@ -53,7 +82,9 @@ window.addEventListener("scroll", function () {
         }
     });
 });
-// Active Navbar Highlight
+
+
+// ================= ACTIVE NAVBAR =================
 window.addEventListener("scroll", () => {
     let sections = document.querySelectorAll("section");
     let navLinks = document.querySelectorAll(".nav-links a");
@@ -65,14 +96,18 @@ window.addEventListener("scroll", () => {
         let id = sec.getAttribute("id");
 
         if (top >= offset && top < offset + height) {
-            navLinks.forEach(link => {
-                link.classList.remove("active");
-                document.querySelector(".nav-links a[href*=" + id + "]").classList.add("active");
-            });
+            navLinks.forEach(link => link.classList.remove("active"));
+
+            const activeLink = document.querySelector(".nav-links a[href*='" + id + "']");
+            if(activeLink){
+                activeLink.classList.add("active");
+            }
         }
     });
 });
-// Animate Skills
+
+
+// ================= SKILL ANIMATION =================
 window.addEventListener("scroll", () => {
     const skills = document.querySelectorAll(".progress");
 
@@ -81,7 +116,30 @@ window.addEventListener("scroll", () => {
         const screenPosition = window.innerHeight - 100;
 
         if(position < screenPosition){
-            skill.style.width = skill.getAttribute("style").split(":")[1];
+            skill.style.width = skill.getAttribute("data-width");
         }
     });
+});
+
+
+// ================= HAMBURGER MENU =================
+const toggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+if(toggle){
+    toggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+}
+
+
+// ================= SCROLL PROGRESS BAR =================
+window.addEventListener("scroll", () => {
+    const scrollBar = document.querySelector(".scroll-progress");
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (window.scrollY / scrollHeight) * 100;
+
+    if(scrollBar){
+        scrollBar.style.width = scrolled + "%";
+    }
 });
