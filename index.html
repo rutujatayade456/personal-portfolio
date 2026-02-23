@@ -1,33 +1,128 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Rutuja Tayade | Portfolio</title>
+    <title>Rutuja Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="scroll-progress"></div>
-
-<!-- NAVIGATION -->
+<!-- ================= NAVBAR ================= -->
 <nav>
-    <button id="theme-toggle" class="primary-btn">Toggle Theme</button>
     <div class="menu-toggle" id="menu-toggle">☰</div>
 
     <ul class="nav-links" id="nav-links">
-        <li><a href="#home">Home</a></li>
+        <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#resume">Education</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#projects">Project</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
 
-<main>
-
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 <section class="hero" id="home">
-    <div class="hero-content">
+    <div>
+        <h2>Hello, I'M</h2>
+        <h1>Rutuja Tayade</h1>
+        <p>I am Frontend Developer<span id="typing"></span></p>
+        <div>
+            <button class="primary-btn">Hire Me</button>
+
+            <a href="cv.pdf" download class="secondary-btn">
+                Download CV
+            </a>
+        </div>
+    </div>
+</section>
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+
+  <div class="about-box">
+    <p>
+     I am a passionate Frontend Developer and BCA student with a strong interest in creating modern and responsive websites.
+I enjoy turning ideas into clean, user-friendly digital experiences.
+I continuously improve my skills in HTML, CSS, JavaScript, and UI/UX design.
+I am eager to learn, grow, and contribute to real-world projects in the tech industry.
+    </p>
+
+    </p>
+  </div>
+</section>
+
+
+<!-- ================= SKILLS (UPGRADED) ================= -->
+<section id="skills">
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="skills-container">
+        <div class="skill-box">
+            <span>💻</span>
+            <h3>HTML</h3>
+        </div>
+
+        <div class="skill-box">
+            <span>🎨</span>
+            <h3>CSS</h3>
+        </div>
+
+        <div class="skill-box">
+            <span>⚡</span>
+            <h3>JavaScript</h3>
+        </div>
+
+        <div class="skill-box">
+            <span>🐍</span>
+            <h3>Python</h3>
+        </div>
+    </div>
+</section>
+
+    </p>
+
+    </p>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="project-grid">
+        <div class="project-item">
+            <h3>Portfolio Website</h3>
+            <p>Responsive personal portfolio.</p>
+        </div>
+         <div class="project-grid">
+        <div class="project-item">
+            <h3>tourisom of india</h3>
+            <p>Explore India's Top Destinations</p>
+        </div>
+
+        
+    </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <form id="contact-form">
+  <input type="text" name="user_name" placeholder="Your Name" required>
+  <input type="email" name="user_email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit" class="submit-btn">Send Message</button>
+</form>
+
+</section>
+
+<!-- ================= FOOTER (FIXED POSITION) ================= -->
+<footer>
+    <p>© 2026 rutuja tayade | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
